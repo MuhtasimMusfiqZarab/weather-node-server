@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=`, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <!-- <link rel="stylesheet" href="/css/styles.css" /> this also can be used because the root server is set on public folder and  / means relative to web server root which is public folder -->
 
     <title>Document</title>
@@ -13,9 +13,11 @@
 
 <body>
     {{!-- here we are injecting a value in hbs file --}}
-    <h1>{{title}}</h1>
-    <p>Created by {{name}}</p>
-    <script src="/js/app.js"></script>
+    {{> header}}
+
+    <p>{{error}}</p>
+    {{> footer}}
+
 </body>
 
 </html>
