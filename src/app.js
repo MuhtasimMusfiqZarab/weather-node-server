@@ -48,9 +48,15 @@ app.get("/help", (req, res) => {
 
 //  this are used for manually serving data
 app.get("/weather", (req, res) => {
+  if (!req.query.address) {
+    return res.send({
+      error: "You need to provide an address"
+    }); // res.send can send both string and object with key value pair
+  }
   res.send({
     forecast: "It is raining",
-    location: "Dhaka"
+    location: "Dhaka",
+    address: req.query.address
   });
 });
 
