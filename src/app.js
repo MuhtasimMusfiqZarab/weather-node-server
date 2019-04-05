@@ -55,18 +55,18 @@ app.get("/weather", (req, res) => {
 });
 
 app.get("/help/*", (req, res) => {
-  res.render("routeError", {
+  res.render("404", {
     error: " Help article Not Found",
-    title: "Help Page",
+    title: "Help Page 404",
     author: "Muhtasim Musfiq Zarab"
   });
 });
 
 //  * is wildcard character for matching everythinhg else
 app.get("*", (req, res) => {
-  res.render("routeError", {
+  res.render("404", {
     error: "404 page not found",
-    title: "About Page",
+    title: "404",
     author: "Muhtasim Musfiq Zarab"
   });
 });

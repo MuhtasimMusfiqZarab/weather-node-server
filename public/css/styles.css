@@ -1,8 +1,48 @@
-h1 {
-  color: darkred;
+body {
+  color: #900c3f;
+  font-family: "Courier New", Courier, monospace;
+  /* width of the content */
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  /* using css flexbox for sticking the footer */
+  display: flex;
+  /* the default is row */
+  flex-direction: column;
+  /* vh stands for viewport height */
+  min-height: 100vh;
 }
 
-img {
+/* targetting the elements except the footer  */
+.main-content {
+  /* letting it take as much space as it can have */
+  flex-grow: 1;
+}
+
+footer {
+  color: #c70039;
+  border-top: 1px solid #ffc300;
+  margin-top: 16px;
+  padding: 16px 16px;
+}
+
+header {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+
+header a {
+  color: #ffc300;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.portrait {
   width: 250px;
-  height: 250px;
 }
