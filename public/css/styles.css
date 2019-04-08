@@ -46,3 +46,17 @@ header a {
 .portrait {
   width: 250px;
 }
+
+input {
+  /* width type color of the border */
+  border: 1px solid #900c3f;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #ffc300;
+  background: #581845;
+  color: #ffc300;
+  padding: 8px;
+}
