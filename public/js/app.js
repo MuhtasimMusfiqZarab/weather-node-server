@@ -20,7 +20,8 @@ weatherForm.addEventListener("submit", e => {
         messageOne.textContent = data.location;
         messageTwo.textContent = `The temperature is ${
           data.forecast.temperature
-        } and the probability of rain is ${data.forecast.rain * 1000}%`;
+        } Degree celsius and the probability of rain is ${data.forecast.rain *
+          1000}%`;
       }
     });
   });
