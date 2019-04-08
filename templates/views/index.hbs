@@ -8,7 +8,7 @@
     <title>Weather</title>
     <link rel="icon" href="/img/weather.png" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <script src="/js/app.js"></script>
+
     <!-- <link rel="stylesheet" href="/css/styles.css" /> this also can be used because the root server is set on public folder and  / means relative to web server root which is public folder -->
 
 </head>
@@ -19,10 +19,16 @@
     <div class="main-content">
         {{> header}}
         <p>Use this site to get weather</p>
+        <form action="">
+            <input type="text" placeholder="Location">
+            <button>Search</button>
+        </form>
     </div>
 
 
     {{> footer}}
+
+    <script src="/js/app.js"></script>
 
 </body>
 
