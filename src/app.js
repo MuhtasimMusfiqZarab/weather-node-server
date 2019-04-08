@@ -10,6 +10,9 @@ console.log(path.join(__dirname, "../public"));
 console.log(__filename);
 
 const app = express();
+const port = process.env.PORT || 3000;
+
+//Define Path for express config
 const viewPath = path.join(__dirname, "../templates/views");
 const partialPath = path.join(__dirname, "../templates/partials");
 
@@ -94,9 +97,9 @@ app.get("*", (req, res) => {
   });
 });
 
-//start server
-app.listen(3000, () => {
-  console.log("server is up on port 3000");
+//start server in heruko and locally
+app.listen(port, () => {
+  console.log(`server is up on port ${port}`);
 });
 
 //----------------------------------------------//
