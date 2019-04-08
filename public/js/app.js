@@ -18,10 +18,11 @@ weatherForm.addEventListener("submit", e => {
         messageOne.textContent = data.error;
       } else {
         messageOne.textContent = data.location;
-        messageTwo.textContent = `The temperature is ${
-          data.forecast.temperature
-        } Degree celsius and the probability of rain is ${data.forecast.rain *
-          1000}%`;
+        messageTwo.textContent = ` Weather Summary: ${
+          data.forecast.summary
+        } || The temperature is ${data.forecast.temperature} || Humidity: ${data
+          .forecast.humidity * 100}% || precipProbability: ${data.forecast
+          .rain * 1000}%`;
       }
     });
   });

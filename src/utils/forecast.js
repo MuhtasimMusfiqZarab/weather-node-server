@@ -15,10 +15,13 @@ const forecast = (lat, long, callback) => {
     } else if (bodyError) {
       callback("Unable to find location of given address", undefined);
     } else {
-      const { temperature, precipProbability: rain } = data;
+      console.log(data);
+      const { temperature, precipProbability: rain, summary, humidity } = data;
       callback(undefined, {
         temperature,
-        rain
+        rain,
+        summary,
+        humidity
       });
     }
   });
